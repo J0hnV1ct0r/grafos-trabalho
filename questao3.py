@@ -1,4 +1,5 @@
 if __name__ == '__main__':
+  # Variables:
   grafo = {
     'A' : [0,1,1,0,0,0],#A
     'V' : [-1,0,0,1,0,1],#V
@@ -19,6 +20,8 @@ if __name__ == '__main__':
   de = 0
   fe = 0
   we = 0
+
+  # Matrix Printer:
   for i in grafo:
     for j in range(len(grafo[i])):
       grafos = ['A','V','C','D','F','W']
@@ -30,6 +33,7 @@ if __name__ == '__main__':
          
     print("\n")
 
+  # Degree Counter:
   for i in grafo:
     for j in range(len(grafo[i])):
       #print(i)
