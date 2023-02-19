@@ -1,4 +1,5 @@
 if __name__ == '__main__':
+  # Variables:
   grafo = {
     'A' : [0,1,1,0,0,0],#A
     'V' : [-1,0,0,1,0,1],#V
@@ -19,6 +20,8 @@ if __name__ == '__main__':
   de = 0
   fe = 0
   we = 0
+
+  # Matrix Printer:
   for i in grafo:
     for j in range(len(grafo[i])):
       grafos = ['A','V','C','D','F','W']
@@ -30,35 +33,36 @@ if __name__ == '__main__':
          
     print("\n")
 
+  # Degree Counter:
   for i in grafo:
     for j in range(len(grafo[i])):
       #print(i)
-      if grafo[i][j] > 0 and i == 'A':
+      if grafo[i][j] < 0 and i == 'A':
         a+=1
-      elif grafo[i][j] < 0 and i == 'A':
+      elif grafo[i][j] > 0 and i == 'A':
         ae+=1
-      if grafo[i][j] > 0 and i == 'V':
+      if grafo[i][j] < 0 and i == 'V':
         v+=1
-      elif grafo[i][j] < 0 and i == 'V':
+      elif grafo[i][j] > 0 and i == 'V':
         ve+=1
-      if grafo[i][j] > 0 and i == 'C':
+      if grafo[i][j] < 0 and i == 'C':
         c+=1
-      elif grafo[i][j] < 0 and i == 'C':
+      elif grafo[i][j] > 0 and i == 'C':
         ce+=1
-      if grafo[i][j] > 0 and i == 'D':
+      if grafo[i][j] < 0 and i == 'D':
         d+=1
-      elif grafo[i][j] < 0 and i == 'D':
+      elif grafo[i][j] > 0 and i == 'D':
         de+=1
-      if grafo[i][j] > 0 and i == 'F':
+      if grafo[i][j] < 0 and i == 'F':
         f+=1
-      elif grafo[i][j] < 0 and i == 'F':
+      elif grafo[i][j] > 0 and i == 'F':
         fe+=1
-      if grafo[i][j] > 0 and i == 'W':
+      if grafo[i][j] < 0 and i == 'W':
         w+=1
-      elif grafo[i][j] < 0 and i == 'W':
+      elif grafo[i][j] > 0 and i == 'W':
         we+=1
         
-  print('Entradas:')
-  print(f'A_S={a} V_S={v} C_S={c} D_S={d} F_S={f} W_S={w} \n')
-  print('Saidas:')
-  print(f'A_E={ae} V_E={ve} C_E={ce} D_E={de} F_E={fe} W_E={we}')
+  print('Graus de Entrada:')
+  print(f'A={a} V={v} C={c} D={d} F={f} W={w} \n')
+  print('Graus de Saida:')
+  print(f'A={ae} V={ve} C={ce} D={de} F={fe} W={we}')
